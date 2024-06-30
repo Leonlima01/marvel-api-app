@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+:root{
+    font-size: 1em;
+    --marvel-red: rgb(201, 0, 0);
+}
+body{
+    background-color: var(--marvel-red);
+}
+.app{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+    background-color: white;
+    position: relative;
+}
+.app::after{
+    content: '';
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    background-image: url("https://i.pinimg.com/736x/7a/ab/32/7aab32b4eaaef044887908f8aa922a1c.jpg");
+    opacity: 0.5;
+}
+.app *{
+    z-index: 1;
+}
+.big-text{
+    font-size: 4em;
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+    margin: 0px;
+}
+.title-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(29, 29, 29);
+    width: 100%;
+    margin-bottom: 40px;
+}
+.title-div *{
+    font-size: 4em;
+    padding: 5px 25px;
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+    
+}
+.marvel-logo{
+    color: white;
+    background-color: var(--marvel-red);
+    text-shadow: 0px 0px 10px black;
+}
+.marvel-logo + *{
+    color: white;
+    font-size: 4em;
+}
+
+.comic-area{
+    width: 90%;
+    display: grid;
+    grid-template-columns: 250px 4fr;
+    grid-template-areas: 
+        'title title'
+        'marvel-card content'
+        'marvel-card amount';
+    justify-items: center;
+    background-color: rgba(150, 0, 0, 0.479);
+    border: 10px solid var(--marvel-red);
+    padding: 20px;
+    border-radius: 30px;
+    margin-bottom: 60px;
+    position: relative;
+}
+span{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: white;
+    font-family: sans-serif;
+    font-size: 2em;
+}
+
+.comic-area .marvel-card{
+    grid-area: marvel-card;
+}
+.comic-amount{
+    grid-area: amount;
+    font-size: 2em;
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+    margin: 0px;
+    color: white;
+    padding: 20px;
+}
+.comic-area h2{
+    grid-area: title;
+    color: white;
+}
+
+.comic-grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(255px,1fr));
+    grid-area: content;
+    gap: 20px;
+}
+
+.comic{
+    display: flex;
+    justify-content: start;
+    background-color: rgba(0, 0, 0, 0.692);
+    padding: 10px;
+}
+.comic p{
+    margin-left: 10px;
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1em;
+}
+
+.search-space{
+    margin-bottom: 25px;
+}
+.search-space input{
+    font-size: 1em;
+    margin-right: 20px;
+    padding: 6px;
+    border: none;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.363);
+    border-radius: 10px;
+    text-align: center;
+}
+.search-space input:focus{
+    outline: none;
+}
+.search-space button{
+    background-color: var(--marvel-red);
+    color: white;
+    border: none;
+    font-size: 1em;
+    padding: 7px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.search-space button:active{
+    transform: scale(0.9);
+}
+.search-area{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+.search-grid{
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    align-items: center;
+    grid-template-columns: repeat( auto-fit, minmax(220px, 1fr) );
+    width: 90%;
+    gap: 10px;
+    perspective: 1000px;
+    margin: 40px;
+}
+
+.marvel-card{
+    border: 2px solid var(--marvel-red);
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    width: fit-content;
+    box-sizing: border-box;
+    border-radius: 10px;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    transition: 0.25s;
+    box-shadow: 0px 0px 10px black;
+    filter: grayscale(0);
+    height: fit-content;
+}
+.marvel-card img{
+    transition: 0.5s;
+}
+.marvel-card:hover img{
+    transform: scale(1.1);
+}
+.marvel-card:hover{
+    box-shadow: 0px 0px 10px var(--marvel-red);
+}
+
+.marvel-card p{
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    font-size: 100%;
+    background-color: black;
+    text-shadow: 0px 0px 10px black;
+    padding: 0px 0px;
+    padding-top: 5px;
+    color: white;
+    font-family: "Bebas Neue",'sans-serif';
+    font-size: 1.5em;
+    margin-bottom: 0px;
+    transition: 0.5s;
+    text-align: center;
+}
+.marvel-card:hover p{
+    background-color: var(--marvel-red);
+}
+
+@media screen and (max-width:800px){
+    .title-div{
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        padding: 0px;
+    }
+    .title-div *{
+        margin: 10px;
+    }
+    .search-grid{
+        grid-template-columns: repeat( auto-fit, minmax(150px, 1fr) );
+    }
+    .marvel-card{
+        width: fit-content;
+    }
+    .marvel-card img{
+        width: 150px;
+    }
+    .comic-area{
+        grid-template-areas: 
+        'title title'
+        'marvel-card marvel-card'
+        'amount amount'
+        'content content';
+        width: 80%;
+    }
+    .comic-area .marvel-card{
+        margin-bottom: 0px;
+    }
+}
