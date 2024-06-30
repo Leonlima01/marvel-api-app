@@ -121,16 +121,50 @@ span{
 }
 
 .comic{
-    display: flex;
-    justify-content: start;
+    display: grid;
+    justify-items: center;
+    align-items: start;
     background-color: rgba(0, 0, 0, 0.692);
     padding: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        'image info'
+        'description description'
+    ;
+    height: fit-content;
 }
 .comic p{
     margin-left: 10px;
     color: white;
     font-family: "Bebas Neue", sans-serif;
     font-size: 1em;
+}
+.comic-info{
+    grid-area: info;
+}
+.comic img{
+    height: fit-content;
+    grid-area: image;
+    border: 2px solid gold;
+    animation: hover 1s ease-in-out infinite alternate;
+}
+
+@keyframes hover {
+    from{
+        box-shadow: 0px 5px 8px rgb(255, 0, 0);
+    }
+    to{
+        transform: translateY(2px);
+    }
+}
+
+.comic .desc{
+    font-size: 1em;
+    grid-area: description;
+    text-align: center;
+    width: 100%;
+    margin: 0px;
+    margin-top: 10px;
 }
 
 .search-space{

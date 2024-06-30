@@ -76,6 +76,7 @@ function SearchArea() {
                 <p>Pages: {comic.pageCount}</p>
                 <p>${comic.prices[0].price}</p>
               </div>
+              {comic.description!=""?<p className='desc'>{comic.description}</p>:<p className='desc'>No description</p>}
             </div>
             )}
           </div>
