@@ -6,6 +6,12 @@
 body{
     background-color: var(--marvel-red);
 }
+a:visited{
+    color: inherit;
+}
+a{
+    color: inherit;
+}
 .app{
     display: flex;
     justify-content: start;
@@ -49,11 +55,15 @@ body{
     
 }
 .marvel-logo{
+    font-family: "Bebas Neue", sans-serif;
+    height: fit-content;
+    font-size: 4em;
+    padding: 5px 25px;
     color: white;
     background-color: var(--marvel-red);
     text-shadow: 0px 0px 10px black;
 }
-.marvel-logo + *{
+.title-div .marvel-logo + *{
     color: white;
     font-size: 4em;
 }
@@ -64,8 +74,9 @@ body{
     grid-template-columns: 250px 4fr;
     grid-template-areas: 
         'title title'
+        'amount amount'
         'marvel-card content'
-        'marvel-card amount';
+        ;
     justify-items: center;
     background-color: rgba(150, 0, 0, 0.479);
     border: 10px solid var(--marvel-red);
@@ -81,6 +92,7 @@ span{
     color: white;
     font-family: sans-serif;
     font-size: 2em;
+    cursor: pointer;
 }
 
 .comic-area .marvel-card{
@@ -239,10 +251,11 @@ span{
         'title title'
         'marvel-card marvel-card'
         'amount amount'
-        'content content';
+        'content content'
+        ;
         width: 80%;
     }
     .comic-area .marvel-card{
-        margin-bottom: 0px;
+        margin-bottom: 30px;
     }
 }
