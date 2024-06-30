@@ -2,7 +2,7 @@
  
 ## Descrição
 
-Esse projeto foi feito com intenção de praticar React e utilização de API.
+Esse projeto foi feito com objetivo de praticar o desenvolvimento web com React e utilização de API.
 Foi utilizado a API da Marvel para buscar informação dos personagens e dos quadrinhos de cada personagem.
 
 ## Utilização
