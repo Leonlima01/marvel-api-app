@@ -46,11 +46,11 @@ function SearchArea() {
     
   return (
     <div className="search-area">
+      <h2 className='big-text'>Personagens</h2>
       <div className="search-space">
         <input value={pesquisa} type="text" placeholder='Nome' onChange={pesquisaHandler}/>
         <button onClick={searchCharacter}>Pesquisar</button>
       </div>
-      <h2 className='big-text'>Characters</h2>
       <div className='search-grid'>
         {results.map(result => result.thumbnail.path+"/portrait_incredible.jpg" != '' ? <a href='#comic' onClick={() => showComicArea(result.id,[result.name,result.thumbnail.path+"/portrait_incredible."+result.thumbnail.extension])}className='marvel-card' key={result.id}>
         <p>{result.name}</p>
