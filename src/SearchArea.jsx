@@ -66,7 +66,7 @@ function SearchArea() {
             <p>{character[0]}</p>
             <img src={character[1]} alt="" />
           </div>}
-          {comics.length==0?<div className="comic-amount">Loading...</div>:<p className='comic-amount'>Quantidade: {comics.length}</p>}
+          {comics.length==0?<div className="comic-amount"><div className='loading'></div><p>Loading...</p></div>:<p className='comic-amount'>Quantidade: {comics.length}</p>}
           <h2 className='big-text'>comics</h2>
           <div className="comic-grid">
             {comics.map(comic => <div key={comic.id} className='comic'>
