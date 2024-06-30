@@ -27,7 +27,7 @@ a{
     top: 0px;
     height: 100%;
     width: 100%;
-    background-image: url("https://i.pinimg.com/736x/7a/ab/32/7aab32b4eaaef044887908f8aa922a1c.jpg");
+    background-image: url("assets/background.jpg");
     opacity: 0.5;
 }
 .app *{
@@ -38,6 +38,9 @@ a{
     font-family: "Bebas Neue", sans-serif;
     text-align: center;
     margin: 0px;
+}
+.not-found{
+    font-size: 2em;
 }
 .title-div{
     display: flex;
@@ -169,7 +172,7 @@ span{
     height: fit-content;
     grid-area: image;
     border: 2px solid gold;
-    box-shadow: 0px 2px 8px rgb(255, 0, 0);
+    box-shadow: 0px 2px 8px var(--marvel-red);
 }
 
 .comic .desc{
@@ -280,7 +283,7 @@ span{
     background-color: var(--marvel-red);
 }
 
-@media screen and (max-width:800px){
+@media screen and (max-width:600px){
     .title-div{
         display: flex;
         flex-direction: row;
@@ -316,5 +319,8 @@ span{
     }
     .comic-area .marvel-card{
         margin-bottom: 30px;
+    }
+    .footer .marvel-logo{
+        font-size: 2em;
     }
 }
