@@ -11,7 +11,7 @@ function SearchArea() {
   
   const auth = "&ts=1&apikey=bc3a272645aaf663032ec67153bc2b8b&hash=816885116c4a1cb1a640b5508bcecc42"
   
-  const invalidJpg = "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available/portrait_incredible.jpg"
+  const invalidJpg = "https://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available/portrait_incredible.jpg"
   
   function pesquisaHandler(event){
     setPesquisa(event.target.value)
@@ -37,7 +37,7 @@ function SearchArea() {
   }
 
   function searchComics(id){
-    const searchComic = "https://gateway.marvel.com/v1/public/characters/"+id+"/comics?"+auth+"&limit=100";
+    const searchComic = "https://gateway.marvel.com/v1/public/characters/"+id+"/comics?"+auth+"&limit=10";
     fetch(searchComic)
     .then(response => response.json())
     .then(data => {setComics(data.data.results);setLoading(false)})
