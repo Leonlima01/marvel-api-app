@@ -1,4 +1,12 @@
 # marvel-api-app
+
+Link do site: [https://marvel-comic-explorer.web.app/](https://marvel-comic-explorer.web.app/)
+
+# IMPORTANTE
+
+## 19/08: Por motivos do lado do servidor da API, as requisições estão demorando muito mais do que o normal, tendo problemas com requisições maiores que 30 resultados. Infelizmente o site não funcionará como deveria até que o servidor da Marvel fique estável novamente, portanto limitei a quantidade de Comics encontrados para 10, para diminuir o tempo de espera e ser possivel pelo menos receber alguma resposta.
+
+
  
 ## Descrição:
 
