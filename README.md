@@ -1,6 +1,12 @@
 # marvel-api-app
 
 Link do site: [https://marvel-comic-explorer.web.app/](https://marvel-comic-explorer.web.app/)
+
+# IMPORTANTE
+
+## 19/08: Por motivos do lado do servidor da API, a pesquisa de personagens está demorando muito mais do que deveria, e a tentativa de encontrar os quadrinhos não está recebendo nenhum dado do servidor. Infelizmente o site não funcionará como deveria até que o servidor da Marvel fique estável novamente.
+
+
  
 ## Descrição:
 
